@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Richard K3523064</title>
+</head>
+
+<body>
+    <div id="nav" class="navbar navbar-expand-lg navbar-dark">
+        <a href="UAS home.html" class="navbar-brand"><img src="images/icon.png" alt="Logo" class="navbar-logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="UAS shop.html">SHOP</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">PC</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Laptop</a></li>
+                        <li><a class="dropdown-item" href="#">Motherboard</a></li>
+                        <li><a class="dropdown-item" href="#">SSD</a></li>
+                        <li><a class="dropdown-item" href="#">RAM</a></li>
+                        <li><a class="dropdown-item" href="#">GPU</a></li>
+                        <li><a class="dropdown-item" href="#">Power Supply</a></li>
+                        <li><a class="dropdown-item" href="#">Cooling</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">ACCESSORIES</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">CPU Cases</a></li>
+                        <li><a class="dropdown-item" href="#">Mouse</a></li>
+                        <li><a class="dropdown-item" href="#">Keyboard</a></li>
+                        <li><a class="dropdown-item" href="#">Handheld</a></li>
+                        <li><a class="dropdown-item" href="#">Monitor</a></li>
+                        <li><a class="dropdown-item" href="#">Audio</a></li>
+                        <li><a class="dropdown-item" href="#">Webcam</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">NEWS</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="UAS news.html">Product Launch</a></li>
+                        <li><a class="dropdown-item" href="UAS news.html">Events</a></li>
+                        <li><a class="dropdown-item" href="UAS news.html">E-sports</a></li>
+                        <li><a class="dropdown-item" href="UAS news.html">Product Review</a></li>
+                        <li><a class="dropdown-item" href="UAS news.html">Game Review</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">COMMUNITY</a></li>
+                <li class="nav-item"><a class="nav-link" href="UAS about.html">SUPPORT</a></li>
+            </ul>
+            <ul>
+                <li class="nav-item"><button class="nav-link" id="search-btn"><img src="images/wsearch.png" alt="Search"></button></li>
+                <li class="nav-item"><a class="nav-link" href="#"><img src="images/wcart.png" alt="Cart"></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><img src="images/wuser.png" alt="User"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="search-box">
+        <input type="text" id="search-input" placeholder="Type to search..." />
+        <button id="clear-btn">CLEAR</button>
+        <button id="clear-btn"><img src="images/wsearch.png" style="width: auto; height: 20px;"></button>
+        <div class="llinetext"></div>
+    </div>
+
+    <main>
+        <div style="text-align: center; margin-top: 20px;">
+            <h1 class="bigtext">PC & Parts Store</h1>
+        </div>        
+        <div>
+            <div class="row row-custom">
+                <div class="col-lg-2">
+                    <nav id="filter-buttons" style="position: sticky;">
+                        <button class="button active" data-filter="all">All</button>
+                        <button class="button" data-filter="category1">Laptop</button>
+                        <button class="button" data-filter="category2">Motherboard</button>
+                        <button class="button" data-filter="category3">SSD</button>
+                        <button class="button" data-filter="category4">RAM</button>
+                        <button class="button" data-filter="category5">GPU</button>
+                        <button class="button" data-filter="category6">Power Supply</button>
+                        <button class="button" data-filter="category7">Cooling</button>
+                    </nav>
+                </div>
+                <div class="col-lg-10">
+                    <section id="products">
+                        <!-- Category 1 -->
+                        <div class="product-box filter category1">
+                            <img src="images/strix1.png" alt="ROG Strix SCAR 18 (2024)">
+                            <div class="tags">10% OFF</div>
+                            <h2>ROG Strix SCAR 18</h2>
+                            <p class="discount">US$5000.00</p>
+                            <h5 class="cost">US$4500.00</h5>
+                            <button onclick="window.location.href='UAS%20product.html';">MORE INFO</button>
+                        </div>
+                
+                        <!-- Category 2 -->
+                        <div class="product-box filter category2">
+                            <img src="images/macrosshair.png" alt="ROG CROSSHAIR X870E HERO">
+                            <h2>ROG CROSSHAIR X870E HERO</h2>
+                            <h5 class="cost">US$770.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <!-- Category 3 -->
+                        <div class="product-box filter category4">
+                            <img src="images/corsairvengeance.webp" alt="VENGEANCE® RGB 32GB (2x16GB) DDR5">
+                            <div class="tags">NEW</div>
+                            <h2>VENGEANCE® RGB 32GB (2x16GB) DDR5</h2>
+                            <h5 class="cost">US$180.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <!-- Category 3 -->
+                        <div class="product-box filter category5">
+                            <img src="images/gpustrix.png" alt="ROG Strix LC GeForce RTX™ 4090">
+                            <h2>ROG Strix LC GeForce RTX™ 4090</h2>
+                            <h5 class="cost">US$3000.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <!-- Category 3 -->
+                        <div class="product-box filter category6">
+                            <img src="images/psuthor.png" alt="ROG-THOR-1200P2-GAMING">
+                            <h2>ROG-THOR-1200P2-GAMING</h2>
+                            <h5 class="cost">US$360.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category7">
+                            <img src="images/coolryujin.png" alt="ROG Ryujin III 360 ARGB Extreme">
+                            <h2>ROG Ryujin III 360 ARGB Extreme</h2>
+                            <h5 class="cost">US$350.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <!-- Duplicate examples for more items -->
+                        <div class="product-box filter category1">
+                            <img src="images/laptopflow.png" alt="ROG Flow X13 (2023) GV302XU-R945G6T-O">
+                            <h2>ROG Flow X13 (2023) GV302XU-R945G6T-O</h2>
+                            <h5 class="cost">US$1800.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <div class="product-box filter category2">
+                            <img src="images/madominus.png" alt="ROG Dominus Extreme">
+                            <div class="tags">5% OFF</div>
+                            <h2>ROG Dominus Extreme</h2>
+                            <p class="discount">US$3200.00</p>
+                            <h5 class="cost">US$3040.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <div class="product-box filter category3">
+                            <img src="images/ssd6.webp" alt="MP600 1TB PCIe Gen4 x4 NVMe 1.4 M.2 SSD">
+                            <div class="tags">NEW</div>
+                            <h2>MP600 1TB PCIe Gen4 x4 NVMe 1.4 M.2 SSD</h2>
+                            <h5 class="cost">US$100.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category5">
+                            <img src="images/gpumatrix.png" alt="ROG Matrix Platinum GeForce RTX™ 4090">
+                            <h2>ROG Matrix Platinum GeForce RTX™ 4090</h2>
+                            <h5 class="cost">US$4800.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category6">
+                            <img src="images/psuloki.png" alt="ROG-LOKI-1200T-SFX-L-GAMING">
+                            <h2>ROG-LOKI-1200T-SFX-L-GAMING</h2>
+                            <h5 class="cost">US$250.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category7">
+                            <img src="images/coolstrix.png" alt="ROG Strix LC III 360 ARGB">
+                            <h2>ROG Strix LC III 360 ARGB</h2>
+                            <h5 class="cost">US$240.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <h1 class="bigtext">PC ACCESSORIES</h1>
+        </div>    
+        <div>
+            <div class="row row-custom">
+                <div class="col-lg-2">
+                    <nav id="filter-buttons" style="position: sticky;">
+                        <button class="button active" data-filter="all">All</button>
+                        <button class="button" data-filter="category11">CPU Cases</button>
+                        <button class="button" data-filter="category12">Mouse</button>
+                        <button class="button" data-filter="category13">Keyboard</button>
+                        <button class="button" data-filter="category14">Monitor</button>
+                        <button class="button" data-filter="category15">Handheld</button>
+                        <button class="button" data-filter="category16">Audio</button>
+                        <button class="button" data-filter="category17">Webcam</button>
+                    </nav>
+                </div>
+                <div class="col-lg-10">
+                    <section id="products">
+                        <!-- Category 1 -->
+                        <div class="product-box filter category11">
+                            <img src="images/casehyperion.png" alt="ROG Hyperion EVA-02 Edition">
+                            <div class="tags">NEW</div>
+                            <h2>ROG Hyperion EVA-02 Edition</h2>
+                            <h5 class="cost">US$1800.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <!-- Category 2 -->
+                        <div class="product-box filter category12">
+                            <img src="images/mousekeris.png" alt="ROG Keris II Ace">
+                            <div class="tags">10% OFF</div>
+                            <h2>ROG Keris II Ace</h2>
+                            <p class="discount">US$150.00</p>
+                            <h5 class="cost">US$135.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <!-- Category 3 -->
+                        <div class="product-box filter category13">
+                            <img src="images/keyclaymore.png" alt="ROG Claymore II">
+                            <div class="tags">10% OFF</div>
+                            <h2>ROG Claymore II</h2>
+                            <p class="discount">US$270.00</p>
+                            <h5 class="cost">US$243.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category14">
+                            <img src="images/screencurve.png" alt="ROG Swift OLED PG39WCDM">
+                            <h2>ROG Swift OLED PG39WCDM</h2>
+                            <h5 class="cost">US$1700.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category15">
+                            <img src="images/allyx.png" alt="ROG Ally X (2024)">
+                            <div class="tags">NEW</div>
+                            <h2>ROG Ally X (2024)</h2>
+                            <h5 class="cost">US$900.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <div class="product-box filter category16">
+                            <img src="images/audiopelta.png" alt="ROG Pelta">
+                            <h2>ROG Pelta</h2>
+                            <h5 class="cost">US$300.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <!-- Duplicate examples for more items -->
+                        <div class="product-box filter category11">
+                            <img src="images/casehelios.png" alt="ROG Strix Helios">
+                            <h2>ROG Strix Helios</h2>
+                            <h5 class="cost">US$270.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <div class="product-box filter category12">
+                            <img src="images/mousechakram.png" alt="ROG Chakram X Origin">
+                            <h2>ROG Chakram X Origin</h2>
+                            <h5 class="cost">US$180.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category13">
+                            <img src="images/keyscope.png" alt="ROG Strix Scope NX TKL">
+                            <h2>ROG Strix Scope NX TKL</h2>
+                            <h5 class="cost">US$120.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category14">
+                            <img src="images/screenswift.png" alt="ROG Swift OLED PG48UQ">
+                            <h2>ROG Swift OLED PG48UQ</h2>
+                            <h5 class="cost">US$2400.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+
+                        <div class="product-box filter category15">
+                            <img src="images/phone9pro.png" alt="ROG Phone 9 Pro">
+                            <h2>ROG Phone 9 Pro</h2>
+                            <h5 class="cost">US$1600.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                
+                        <div class="product-box filter category17">
+                            <img src="images/mxbrio.png" alt="Logitech MX BRIO">
+                            <div class="tags">NEW</div>
+                            <h2>Logitech MX BRIO</h2>
+                            <h5 class="cost">US$200.00</h5>
+                            <button>MORE INFO</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer">
+        <div class="row my-3">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-md-6" style="margin-bottom: 20px;"> <!-- Adjusted width here -->
+                        <div>
+                            <h3>Shop</h3>
+                            <p>Motherboard</p>
+                            <p>Processor</p>
+                            <p>SSD</p>
+                            <p>RAM</p>
+                            <p>GPU</p>
+                            <p>Cases</p>
+                            <p>Accessories</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6"> <!-- Adjusted width here -->
+                        <div>
+                            <h3>Follow Us</h3>
+                            <p><a href="https://www.youtube.com/@weichenplays">YouTube</a></p>
+                            <p><a href="https://www.instagram.com/tee_ui_seng">Instagram</a></p>
+                            <p><a href="#">TikTok</a></p>
+                            <p><a href="#">Facebook</a></p>
+                            <p><a href="#">X</a></p>
+                            <p><a href="#">Discord</a></p>
+                            <p><a href="#">Twitch</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div>
+                    <h1 class="bigtext" style="display: flex; align-items: center; gap: 20px;">
+                        <img src="images/icon.png" style="width: auto; height: 90px;">FURINA
+                    </h1>
+                    <h3 style="font-size: 100px; text-align: left; margin-bottom: -60px;">“</h1>
+                    <h4><b><i>Striving innovation, in an affordable package, with great customer satisfaction, into everlasting memories!</i></b></h4>
+                    <h3 style="font-size: 100px; text-align: right; margin-top: -20px; margin-right: 10px;">”</h1>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div>
+                    <h3>Contact Us</h3> <!-- Fixed typo "Cuntattaci" -->
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Name" name="">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                    <input type="submit" class="btn-secondary" value="SEND" name="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ending">
+        <h5 style="margin-top: 8px;">Copyright © 2024 Furina Inc. All rights reserved.</h5>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

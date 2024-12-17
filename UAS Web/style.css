@@ -1,0 +1,1169 @@
+@font-face {
+    font-family: fontJudul;
+    src: url('fonts/zh-cn.ttf');
+}
+
+@font-face {
+    font-family: fontROG;
+    src: url('fonts/ROGFONTS.OTF');
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/dragonspinenorth.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: bottom;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#main {
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: bottom;
+    width: 100%;
+    height: 500px;
+    margin-bottom: -5px;
+    object-fit: cover; 
+}
+
+#judul {
+    font-family: fontJudul;
+    font-size: 50px;
+    text-align: right;
+    padding: 200px 40px 0 0
+}
+
+#judul a {
+    color: white;
+    text-decoration: none
+}
+
+#judul a:hover {
+    color: black;
+}
+
+.subjudul {
+    font-family: fontROG;
+    font-size: 30px;
+    color: red;
+    text-align: right;
+    padding: 0 40px 0 0;
+}
+
+#nav {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background: black;
+    padding: 0 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+#nav img {
+    width: auto;
+    height: 30px; 
+    margin: 10px 50px; 
+}
+
+#nav ul {
+    list-style: none;
+    display: flex; 
+    padding: 0;
+    margin: 0;
+    margin-left: auto; 
+}
+
+#nav ul li {
+    position: relative; 
+    transition: background-color 0.5s ease;
+}
+
+#nav ul li img {
+    width: auto;
+    height: 20px; 
+    margin: 0; 
+}
+
+#nav ul li:hover {
+    background: #444; 
+}
+
+#nav ul li:hover > a {
+    color: #30c4fc; 
+}
+
+#nav ul li a {
+    display: block;
+    color: white;
+    padding: 10px 5vh;
+    text-decoration: none;
+}
+
+#nav ul li button {
+    display: block;
+    color: white;
+    padding: 10px 5vh;
+    text-decoration: none;
+}
+
+#nav ul li:hover > ul {
+    display: block; 
+}
+
+#nav ul ul {
+    background: white;
+    position: absolute; 
+    padding: 0;
+    top: 100%;
+    left: 0; 
+    display: none; 
+    z-index: 1000; 
+}
+
+#nav ul ul li {
+    position: relative; 
+}
+
+#nav ul ul li a {
+    padding: 10px 30px; 
+    color: black; 
+    width: 200px;
+}
+
+#nav ul ul li a:hover {
+    background: white; 
+    color: #30c4fc; 
+}
+
+#nav ul ul ul {
+    position: absolute;
+    left: 100%; 
+    top: 0; 
+}
+
+#search-box {
+    display: none; /* Initially hidden */
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#search-box input {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    outline: none;
+}
+
+#search-box input::placeholder {
+    color: gray;
+}
+
+#search-box button {
+    width: 80px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#search-box button:hover {
+    background-color: darkred;
+}
+
+.linetext {
+    background-color: red;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn img,
+.next-btn img {
+    width: 5vh;
+    height: 10vh;
+    opacity: 0.8;
+}
+
+.prev-btn img:hover,
+.next-btn img:hover {
+    opacity: 1;
+}
+
+#background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    width: 100vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#background-container .col-md-7 {
+    text-align: center; /* Centers the content horizontally */
+}
+
+/* Make sure the columns are inline */
+.row-custom {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Optional: Styling for the image to make it responsive */
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+
+.bigtext {
+    font-family: fontROG;
+    font-size: 7vh;
+}
+
+#background-container p {
+    font-size: 20px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+#background-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border: 2px solid black; /* Outline color */
+    background-color: transparent; /* Transparent background */
+    color: black; /* Default text color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+#background-container button:hover {
+    background-color: black; /* Background color on hover */
+    color: white; /* Transparent text on hover */
+    border-color: black; /* Outline remains black */
+}
+
+#parr {
+    display: flex;
+    align-items: center; /* Center the buttons vertically */
+    justify-content: space-between; /* Space between buttons and scrollable section */
+    width: 100%;
+    height: auto;
+}
+
+#parr h1 {
+    align-content: center;
+    text-align: center;
+}
+
+.frame-container {
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollable-section {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px;
+}
+
+.scrollable-section::-webkit-scrollbar {
+    display: none; /* Hide scrollbars */
+}
+
+.box {
+    flex: 0 0 calc(33.333% - 10px);
+    scroll-snap-align: start;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+}
+
+.box img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.box h1 {
+    font-family: fontJudul;
+    margin-top: 2vh;
+}
+
+.box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border: 2px solid black; /* Outline color */
+    background-color: transparent; /* Transparent background */
+    color: black; /* Default text color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.box button:hover {
+    background-color: black; /* Background color on hover */
+    color: white; /* Transparent text on hover */
+    border-color: black; /* Outline remains black */
+}
+
+.navigation-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 3vh;
+    display: flex;
+    align-items: center; /* Ensure button content is vertically centered */
+    justify-content: center;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+.navigation-button img {
+    width: 5vh;
+    height: 10vh;
+}
+
+#content {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: right;
+    padding-bottom: 30px;
+}
+
+#content h1{
+    text-align: center;
+    margin: 60px 0 10px 0;
+    color: red;
+    font-family: fontROG;
+}
+
+#content h2{
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+    font-family: fontROG;
+}
+
+.thebutton {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.thebutton button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    border: 2px solid red; /* Outline color */
+    background-color: transparent; /* Transparent background */
+    color: red; /* Default text color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.thebutton button:hover {
+    background-color: red; /* Background color on hover */
+    color: white; /* Transparent text on hover */
+    border-color: red; /* Outline remains black */
+}
+
+#content2 {
+    background-color: red;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    clear: both;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+#content2 h1{
+    text-align: center;
+    margin: 60px 0 10px 0;
+    color: white;
+    font-family: fontROG;
+}
+
+#content2 button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    width: 30%;
+    border: 2px solid white; /* Outline color */
+    background-color: transparent; /* Transparent background */
+    color: white; /* Default text color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+#content2 button:hover {
+    background-color: red; /* Background color on hover */
+    color: white; /* Transparent text on hover */
+    border-color: red; /* Outline remains black */
+}
+
+.bars {
+    width: auto;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center; 
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#section {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    padding: 0 0 1px 0;
+}
+
+#section h5 {
+    color: red;
+}
+
+#maj {
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    margin: 40px auto;
+    display: block;
+}
+
+.transparent-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Matches the image width */
+    height: calc(100% - 100px); /* Ensures full coverage of the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.transparent-box h2, 
+.transparent-box p {
+    margin: 10px 0;
+}
+
+.transparent-box button {
+    background-color: #30c4fc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.transparent-box button:hover {
+    background-color: #1a8cbc;
+}
+
+.textbox {
+    position: absolute;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white; 
+    padding: 15px; 
+    width: 40%; 
+    box-sizing: border-box; 
+    border-radius: 20px;
+    margin: 40px auto;
+}
+
+#contentpdf {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: right;
+}
+
+#contentpdf table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto 60px auto;
+}
+
+#contentpdf td {
+    vertical-align: top;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+
+#sectionpdf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contentpdf button {
+    background-color: #30c4fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    margin-left: auto; 
+}
+
+.gambar {
+    width: auto;
+    height: 180px;
+    margin: 2%;
+    right: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+}
+
+.heading {
+    font-family: fontJudul;
+    font-size: 30px;
+    color: red;
+    margin: 20px 20px 10px 20px;
+}
+
+.headingnews {
+    font-family: fontJudul;
+    font-size: 25px;
+    color: black;
+    margin: 20px 20px 10px 20px;
+}
+
+.headingnews a {
+    text-decoration: none;
+    color: black;
+}
+
+.dated {
+    margin: 0;
+    color: #888888;
+    text-align: justify;
+    margin: 20px 20px 10px 20px;
+}
+
+.typethumbs{
+    width: 100%;
+    height: 500px;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.article {
+    margin: 10px 20px 10px 20px;
+    text-align: justify;
+}
+
+.article a {
+    text-decoration: none;
+    color: #30c4fc;
+}
+
+.wiki {
+    width: 80%;
+    margin: 0 auto; 
+    text-align: justify;
+}
+
+.thumbs {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px 10px 0 0; 
+    margin: 0; 
+}
+
+#footer {
+    background-color: black;
+    padding: 10px 0 0 0;
+    width: 100%;
+    height: auto;
+    clear: both;
+    margin: 20 0 0 0;
+    text-align: center;
+    color: white;
+}
+
+#footer img {
+    width: auto;
+    height: 150px; 
+    margin: 0 20px 10px -5px; 
+}
+
+/* Styling for headings */
+#footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: fontJudul;
+    font-size: 4vh;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer::after {
+    content: "";
+    display: block;
+    height: 5vh; 
+}
+
+/* General styles for the row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding: 5vh;
+}
+
+/* Add spacing between columns */
+.col-lg-4 {
+    padding: 15px;
+    text-align: left; /* Ensures all text aligns to the left */
+}
+
+/* Styling for the logo and contact details */
+.col-lg-4 img {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.col-lg-4 p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.col-lg-4 a {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap default link color */
+}
+
+.col-lg-4 a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust text alignment and spacing for the shop and follow us section */
+.col-lg-4 .row .col-md-2 {
+    flex: 0 0 33%;
+    max-width: 33%;
+}
+
+.col-lg-4 .row .col {
+    flex: 0 0 66%;
+    max-width: 66%;
+}
+
+/* Follow Us Links */
+.col-lg-4 .row a {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Contact form styles */
+.feature-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+input.form-control {
+    border-radius: 0;
+    background-color: black;
+    border: 1px solid white; 
+    color: white;
+    color: white;
+}
+
+input.form-control::placeholder {
+    color: white; /* Change placeholder text color to white */
+    opacity: 1; /* Ensure full visibility of the placeholder text */
+}
+
+textarea.form-control::placeholder {
+    color: white; /* Change placeholder text color to white */
+    opacity: 1; /* Ensure full visibility of the placeholder text */
+}
+
+textarea.form-control {
+    resize: none;
+    border-radius: 0;
+    background-color: black;
+    border: 1px solid white; 
+    color: white;
+}
+
+/* Submit button */
+.btn-secondary {
+    background-color: red; /* Default button color */
+    color: white; /* Default text color */
+    border: 1px solid red; /* Remove border if any */
+    padding: 10px 20px; /* Adjust padding for better button size */
+    border-radius: 0; /* Optional: rounded corners */
+    cursor: pointer; /* Pointer cursor to indicate clickability */
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: white; /* Background changes to white */
+    color: red; /* Text changes to red */
+    border: 1px solid red; /* Optional: Add a border on hover */
+}
+
+#ending {
+    background-color: brown;
+    width: 100%;
+    height: auto;
+    clear: both;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    padding: 8px !important;
+    font-family: fontJudul;
+}
+
+
+
+/* Filter Buttons */
+#filter-buttons {
+    top: 20px; /* Sticks to the top of the viewport */
+    margin-bottom: 20px;
+    font-family: fontJudul;
+}
+
+.button {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover, .button.active {
+    background-color: darkred;
+}
+
+/* Products Section */
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    position: relative; /* Parent container for absolute positioning */ 
+}
+
+.product-box:hover {
+    transform: scale(1.05);
+}
+
+.product-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-box h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product-box p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-box button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.product-box button:hover {
+    background-color: darkred;
+}
+
+/* Add the 10% OFF Tag */
+.tags {
+    position: absolute;
+    top: 20px; /* Distance from top */
+    left: 20px; /* Distance from left */
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.cost {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-family: fontROG;
+    font-size: 24px;
+}
+
+
+.sorter {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.image-container {
+    width: 100%; /* Ensures container scales to parent */
+    height: 200px; /* Set a consistent height for the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow */
+    border-radius: 10px;
+}
+
+.sorter img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Prevents distortion and fits the image */
+    border-radius: 10px;
+}
+
+/* Grid container */
+.thumb-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);   /* 2 rows */
+    gap: 20px; /* Spacing between boxes */
+    width: 100%;
+    max-width: 1200px; /* Adjust container width */
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+/* Individual box */
+.thumb {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    overflow: hidden;
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Image styling */
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers box without distortion */
+}
+
+/* Overlay with transparency */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the entire image */
+    background: rgba(0, 0, 0, 0.4); /* Black background with 40% transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* White text */
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.thumb:hover .overlay {
+    background: rgba(0, 0, 0, 0.6); /* Darker background on hover */
+}
+
+.thumb.active .overlay {
+    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+
+/* Products Section */
+#breakingnews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.news-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    position: relative; /* Parent container for absolute positioning */ 
+    display: flex;
+    flex-direction: column; /* Makes children stack vertically */
+    justify-content: space-between; /* Pushes stickies to the bottom */
+}
+
+.news-box:hover {
+    transform: scale(1.05);
+}
+
+.news-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.news-box h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.news-box p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.news-box button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.news-box button:hover {
+    background-color: #218838;
+}
+
+.specs {
+    font-family: fontJudul;
+    color: red;
+    display: inline-block; /* Shrink to text width */
+    position: relative;
+}
+
+.divider-line {
+    width: 100%; /* Full width */
+    height: 2px; /* Thickness of the line */
+    background-color: red; /* Line color */
+    margin-bottom: 10px; /* Spacing above and below the line */
+}
+
+.small-box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border: 2px solid red; /* Outline color */
+    background-color: transparent; /* Transparent background */
+    color: red; /* Default text color */
+    transition: all 0.3s ease; /* Smooth transition */
+    width: 100%;
+}
+
+.small-box button:hover {
+    background-color: red; /* Background color on hover */
+    color: white; /* Transparent text on hover */
+    border-color: red; /* Outline remains black */
+}
+
+.discount {
+    text-align: center;
+    margin-bottom: 30px;
+    color: grey;
+    font-family: fontROG;
+    text-decoration: line-through;
+}
+
+/* Full-width box */
+.full-width-box {
+    width: 100%; /* Expand to full width */
+    background-color: red; /* Background color */
+    text-align: center; /* Center the text */
+    padding: 15px 0; /* Vertical padding */
+    margin-bottom: 20px; /* Spacing above and below the box */
+}
+
+/* Text inside the box */
+.box-text {
+    color: white; /* Text color */
+    font-size: 7vh; /* Adjust text size */
+    margin: 0; /* Remove default margins */
+    font-weight: bold; /* Make it bold */
+    font-family: fontROG;
+}
+
+.dirs {
+    color: black; 
+    text-decoration: none; 
+}
+
+.dirs:hover { /* Removed space before :hover */
+    color: red;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.left-box {
+    position: relative; 
+    display: inline-block;
+}
+
+/* Styling the tag */
+.promos {
+    position: absolute; /* Position relative to the container */
+    top: 12px; /* Distance from the top */
+    left: 25px; /* Distance from the left */
+    background-color: red; /* Background color of the tag */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding around the text */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Optional: Rounded corners */
+    z-index: 10; /* Ensures it stays above the image */
+}
+
+.identity {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-family: fontJudul;
+}
+
+
+/* Warehouses */
+
+
+.stickies {
+    margin-top: auto; /* Pushes this element to the bottom */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.stickies hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.stickies .col {
+    flex: 1; /* Ensures text-align respects column alignment */
+}
